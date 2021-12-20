@@ -30,7 +30,7 @@ li a::after {
     display: block;
     height: 1px;
     width: 0%;
-    background: #FF4949;
+    background: #54F4FE;
 }
 li a:hover::after {
     width: 100%;

@@ -439,10 +439,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 6rem;
 }
 
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
 .mt-80 {
   margin-top: 20rem;
 }
@@ -455,8 +451,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100%;
 }
 
-.h-6 {
-  height: 1.5rem;
+.h-7 {
+  height: 1.75rem;
 }
 
 .h-8 {
@@ -512,9 +508,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   row-gap: 0.75rem;
 }
 
+.bg-purple {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 0 214 / var(--tw-bg-opacity));
+}
+
 .bg-pale {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 248 248 / var(--tw-bg-opacity));
+  background-color: rgb(180 161 255 / var(--tw-bg-opacity));
 }
 
 .p-8 {
@@ -523,6 +524,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-12 {
   padding: 3rem;
+}
+
+.pb-0 {
+  padding-bottom: 0px;
 }
 
 .pl-8 {
@@ -546,6 +551,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2.25rem;
 }
 
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -564,18 +574,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2rem;
 }
 
-.text-red {
+.text-white {
   --tw-text-opacity: 1;
-  color: rgb(255 58 46 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-pale {
+  --tw-text-opacity: 1;
+  color: rgb(180 161 255 / var(--tw-text-opacity));
 }
 
 .text-green {
   --tw-text-opacity: 1;
   color: rgb(50 52 48 / var(--tw-text-opacity));
-}
-
-.opacity-50 {
-  opacity: 0.5;
 }
 
 .transition {
@@ -614,29 +625,25 @@ li a::after {
   display: block;
   height: 1px;
   width: 0%;
-  background: #FF4949;
+  background: #54F4FE;
 }
 
 li a:hover::after {
   width: 100%;
 }
 
-.hover\:text-red:hover {
+.hover\:text-white:hover {
   --tw-text-opacity: 1;
-  color: rgb(255 58 46 / var(--tw-text-opacity));
-}
-
-.hover\:opacity-100:hover {
-  opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
-  .sm\:h-7 {
-    height: 1.75rem;
-  }
-
   .sm\:p-10 {
     padding: 2.5rem;
+  }
+
+  .sm\:pb-2 {
+    padding-bottom: 0.5rem;
   }
 
   .sm\:text-4xl {
@@ -666,6 +673,11 @@ li a:hover::after {
   .md\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .md\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 

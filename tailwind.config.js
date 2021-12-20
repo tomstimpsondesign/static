@@ -4,16 +4,11 @@ module.exports = {
   ], 
   theme: {
     colors: {
-      'pale': '#FFF8F8',
-      'lime': '#59FF88',
-      'lime-alpha': '#469A5C',
-      'mint': '#caffec',
-      'teal': '#00CFAA',
+      'white': '#FFFFFF',
+      'pale': '#B4A1FF',
       'green': '#323430',
-      'green-alpha': '#7E998E',
-      'ochre': '#FFCA0F',
-      'darkgreen': '#121614',
       'red': '#FF3A2E',
+      'purple': '#6B00D6',
     },
     fontFamily: {
       'sans-neutral': ['PolySans-Neutral', 'Helvetica', 'Arial', 'system-ui'],
