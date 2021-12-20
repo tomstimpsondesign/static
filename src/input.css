@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+    font-family: "PolySans-Neutral";
+    src: url("../src/fonts/PolySans-Neutral.woff2") format("woff2"),
+        url("../src/fonts/PolySans-Neutral.woff") format("woff");
+}
+
+@font-face {
+    font-family: "PolySans-Median";
+    src: url("../src/fonts/PolySans-Median.woff2") format("woff2"),
+        url("../src/fonts/PolySans-Median.woff") format("woff");
+}
+
+
+/* footer {
+    font-family: PolySans-Slim;
+} */
+
+li a,
+li a::after {
+    transition: all 0.25s ease-in-out;
+}
+
+li a::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 0%;
+    background: #FF4949;
+}
+li a:hover::after {
+    width: 100%;
+}
