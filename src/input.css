@@ -16,10 +16,6 @@
 }
 
 
-/* footer {
-    font-family: PolySans-Slim;
-} */
-
 li a,
 li a::after {
     transition: all 0.25s ease-in-out;
