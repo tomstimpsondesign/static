@@ -5,12 +5,14 @@ module.exports = {
   theme: {
     colors: {
       'white': '#FFFFFF',
-      'pale': '#B4A1FF',
-      'green': '#323430',
-      'red': '#FF3A2E',
-      'purple': '#6B00D6',
+      'keyline': '#D4D6DB',
+      'charcoal': '#0C0E13',
+      'mid-grey': '#A09FA4',
+      'teal': '#00CFAA',
+      'body': '#45484F',
     },
     fontFamily: {
+      'serif': ['RecklessNeue-Light', 'ui-serif', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
       'sans-neutral': ['PolySans-Neutral', 'Helvetica', 'Arial', 'system-ui'],
       'sans-median': ['PolySans-Median', 'Helvetica', 'Arial', 'system-ui'],
     },

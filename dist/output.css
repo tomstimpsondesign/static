@@ -423,8 +423,76 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-.mb-24 {
-  margin-bottom: 6rem;
+body {
+  cursor: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='8' fill='%2300CFAA'/%3E%3C/svg%3E%0A") 8 8, auto;
+}
+
+/* Global Spacing Values */
+
+.global-y-padding {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .global-y-padding {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .global-y-padding {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .global-y-padding {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .global-y-padding {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.global-x-padding {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (min-width: 768px) {
+  .global-x-padding {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .global-x-padding {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .global-x-padding {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .global-x-padding {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
 }
 
 .mb-12 {
@@ -459,19 +527,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   row-gap: 1rem;
 }
 
-.gap-x-2 {
-  -moz-column-gap: 0.5rem;
-       column-gap: 0.5rem;
-}
-
 .gap-x-4 {
   -moz-column-gap: 1rem;
        column-gap: 1rem;
 }
 
-.bg-purple {
+.bg-white {
   --tw-bg-opacity: 1;
-  background-color: rgb(107 0 214 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .p-8 {
@@ -482,8 +545,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0px;
 }
 
-.font-sans-median {
-  font-family: PolySans-Median, Helvetica, Arial, system-ui;
+.font-serif {
+  font-family: RecklessNeue-Light, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
 }
 
 .font-sans-neutral {
@@ -500,8 +563,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.5rem;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .leading-6 {
   line-height: 1.5rem;
+}
+
+.text-charcoal {
+  --tw-text-opacity: 1;
+  color: rgb(12 14 19 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -509,9 +582,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-pale {
+.text-mid-grey {
   --tw-text-opacity: 1;
-  color: rgb(180 161 255 / var(--tw-text-opacity));
+  color: rgb(160 159 164 / var(--tw-text-opacity));
+}
+
+@font-face {
+  font-family: "RecklessNeue-Light";
+
+  src: url("../src/fonts/RecklessNeue-Light.woff2") format("woff2"),
+        url("../src/fonts/RecklessNeue-Light.woff") format("woff");
 }
 
 @font-face {
@@ -533,21 +613,47 @@ li a::after {
   transition: all 0.25s ease-in-out;
 }
 
-li a::after {
-  content: '';
+.after\:block::after {
+  content: var(--tw-content);
   display: block;
+}
+
+.after\:h-px::after {
+  content: var(--tw-content);
   height: 1px;
-  width: 0%;
-  background: #54F4FE;
 }
 
-li a:hover::after {
+.after\:w-0::after {
+  content: var(--tw-content);
+  width: 0px;
+}
+
+.after\:bg-teal::after {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 207 170 / var(--tw-bg-opacity));
+}
+
+.after\:transition-all::after {
+  content: var(--tw-content);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.after\:duration-300::after {
+  content: var(--tw-content);
+  transition-duration: 300ms;
+}
+
+.after\:content-\[\'\'\]::after {
+  --tw-content: '';
+  content: var(--tw-content);
+}
+
+.hover\:after\:w-full:hover::after {
+  content: var(--tw-content);
   width: 100%;
-}
-
-.hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
@@ -583,8 +689,8 @@ li a:hover::after {
     padding: 3rem;
   }
 
-  .md\:text-5xl {
-    font-size: 3rem;
+  .md\:text-6xl {
+    font-size: 3.75rem;
     line-height: 1;
   }
 
@@ -595,6 +701,14 @@ li a:hover::after {
 }
 
 @media (min-width: 1024px) {
+  .lg\:mb-12 {
+    margin-bottom: 3rem;
+  }
+
+  .lg\:p-0 {
+    padding: 0px;
+  }
+
   .lg\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;

@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: "RecklessNeue-Light";
+    src: url("../src/fonts/RecklessNeue-Light.woff2") format("woff2"),
+        url("../src/fonts/RecklessNeue-Light.woff") format("woff");
+}
 
 @font-face {
     font-family: "PolySans-Neutral";
@@ -15,19 +20,36 @@
         url("../src/fonts/PolySans-Median.woff") format("woff");
 }
 
+@layer base {
+    body {
+        cursor: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='8' fill='%2300CFAA'/%3E%3C/svg%3E%0A") 8 8, auto;
+    }
+
+    /* Global Spacing Values */
+    .global-padding {
+        @apply p-8 md:p-16 lg:p-12 xl:p-16 2xl:p-20;
+    }
+    .global-t-padding {
+        @apply pt-8 md:pt-12 lg:pt-12 xl:pt-16 2xl:pt-20;
+    }
+    .global-b-padding {
+        @apply pb-8 md:pb-12 lg:pb-12 xl:pb-16 2xl:pb-20;
+    }
+    .global-y-padding {
+        @apply py-8 md:py-12 lg:py-12 xl:py-16 2xl:py-20;
+    }
+    .global-x-padding {
+        @apply px-8 md:px-16 lg:px-12 xl:px-16 2xl:px-20;
+    }
+    .global-y-gap {
+        @apply gap-y-6 md:gap-y-8 xl:gap-y-12;
+    }
+    .global-x-gap {
+        @apply gap-x-6 md:gap-x-8 xl:gap-x-12;
+    }
+}
 
 li a,
 li a::after {
     transition: all 0.25s ease-in-out;
-}
-
-li a::after {
-    content: '';
-    display: block;
-    height: 1px;
-    width: 0%;
-    background: #54F4FE;
-}
-li a:hover::after {
-    width: 100%;
 }
